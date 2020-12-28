@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Container(
                                   width: 170.0,
                                   child: Text(
-                                    friends[index].department,
+                                    friends[index].category,
                                     style: TextStyle(
                                         fontSize: 15.0,
                                         fontStyle: FontStyle.italic,
