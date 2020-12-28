@@ -1,6 +1,9 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:music_player_by_gs/friends_details.dart';
+import 'package:page_transition/page_transition.dart';
+import 'app_screens/first_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: AnimatedSplashScreen( //MyHomePage(),
+      duration: 1000,
+        splash: FirstScreen(),
+        nextScreen: MyHomePage(),
+        splashTransition: SplashTransition.fadeTransition,
+        pageTransitionType: PageTransitionType.scale,
+        backgroundColor: Colors.blue
+    )
     );
   }
 }
@@ -129,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Container(
                                   width: 170.0,
                                   child: Text(
-                                    friends[index].category,
+                                    friends[index].department,
                                     style: TextStyle(
                                         fontSize: 15.0,
                                         fontStyle: FontStyle.italic,
