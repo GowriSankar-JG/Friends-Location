@@ -1,4 +1,4 @@
-# music_player_by_gs
+# Google Maps and Flutter - Friends Locations
 
 A new Flutter application developed by GS.
 
